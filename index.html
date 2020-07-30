@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="title">Brycen's Survey Form!</h1>
+        </nav>
+        <p class="description">Thank you for taking the time to answer this survey</p>
+    </header>
+
+    <section class="container">
+        <form action="result.php" method="POST" id="survey-form">
+            
+            <label for="name" id="name-label">
+                <div>Name:</div>
+                <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+            </label>
+
+            <label for="email" id="email-label">
+                <div>Email:</div>
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            </label>
+
+            <label for="age" id="age-label">
+                <div>Age (Optional):</div>
+                <input type="number" id="age" name="age" min="1" max="100" placeholder="Age" required>
+            </label>
+
+            <label for="occupation">
+                <div>Occupation:</div>
+                <ul>
+                    <li>
+                        <label for="student">
+                            <input type="radio" id="student" name="occupation" value="Student" required>
+                            Student
+                        </label>
+                    </li>
+                    <li>
+                        <label for="working">
+                            <input type="radio" id="working" name="occupation" value="Working">
+                            Working
+                        </label>
+                    </li>
+                    <li>
+                        <label for="freelance">
+                            <input type="radio" id="freelance" name="occupation" value="Freelancer">
+                            Freelancer
+                        </label>
+                    </li>
+                    <li>
+                        <label for="unemployed">
+                            <input type="radio" id="unemployed" name="occupation" value="Unemployed">
+                            Unemployed
+                        </label>
+                    </li>
+                </ul>
+            </label>
+
+            <label for="frequency">
+                <div>How often do you play games?</div>
+                <select id="frequency" name="frequency" required>
+                    <option value="" disable selected hidden>Choose an Option</option>
+                    <option value="Never">Never</option>
+                    <option value="Very Rarely">Very Rarely</option>
+                    <option value="Rarely">Rarely</option>
+                    <option value="Occasionally">Occasionally</option>
+                    <option value="Frequently">Frequently</option>
+                    <option value="Very Frequently">Very Frequently</option>
+                </select>
+            </label>
+
+            <label for="hours">
+                <div>How many hours do you play in a day?</div>
+                <select id="hours" name="hours" required>
+                    <option value="" disable selected hidden>Choose an Option</option>
+                    <option value="0-2 Hours">0-2 Hours</option>
+                    <option value="2-4 Hours">2-4 Hours</option>
+                    <option value="4-6 Hours">4-6 Hours</option>
+                    <option value="6-8 Hours">6-8 Hours</option>
+                    <option value="8+ Hours">Over 8 Hours</option>
+                </select>
+            </label>
+
+            <label for="genres" id="checkbox label">
+                <div>What genres do you play?</div>
+                <ul>
+                    <li>
+                        <label for="genre1">
+                            <input type="checkbox" id="genre1" name="genres[]" value="Action">
+                            Action
+                        </label>
+                    </li>
+                    <li>
+                        <label for="genre2">
+                            <input type="checkbox" id="genre2" name="genres[]" value="Action-Adventure">
+                            Action-adventure
+                        </label>
+                    </li>
+                    <li>
+                        <label for="genre3">
+                            <input type="checkbox" id="genre3" name="genres[]" value="Adventure">
+                            Adventure
+                        </label>
+                    </li>
+                    <li>
+                        <label for="genre4">
+                            <input type="checkbox" id="genre4" name="genres[]" value="Role-Playing">
+                            Role-playing
+                        </label>
+                    </li>
+                    <li>
+                        <label for="genre5">
+                            <input type="checkbox" id="genre5" name="genres[]" value="Simulation">
+                            Simulation
+                        </label>
+                    </li>
+                    <li>
+                        <label for="genre6">
+                            <input type="checkbox" id="genre6" name="genres[]" value="Strategy">
+                            Strategy
+                        </label>
+                    </li>
+                    <li>
+                        <label for="genre7">
+                            <input type="checkbox" id="genre7" name="genres[]" value="Sports">
+                            Sports
+                        </label>
+                    </li>
+                    <li>
+                        <label for="genre8">
+                            <input type="checkbox" id="genre8" name="genres[]" value="Horror">
+                            Horror
+                        </label>
+                    </li>
+                </ul>
+            </label>
+
+            <label for="comments">
+                <div>Comments</div>
+                <textarea rows="5" cols="53" id="comments" name="comments" placeholder="Leave a comment"></textarea> 
+            </label>
+
+            <span class="buttons">
+                <input type="submit" id="submit" value="Submit" onclick="return confirm('Are you sure you want to proceed?');">
+                <input type="reset"  id="reset" value="Reset" onclick="return confirm('Are you sure you want to reset?');">
+            </span>
+        </form>
+    </section>
+</body>
+</html>
