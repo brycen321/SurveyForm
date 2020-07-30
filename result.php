@@ -69,6 +69,8 @@
       }
     ?>
 
+      <!-- Hidden table for .xls export -->
+
     <table id="tableData">
         <tr>
             <tbody style="display:none">
